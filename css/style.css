@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 @font-face {
   font-family: "Roboto";
   font-style: normal;
@@ -56,16 +49,10 @@
 
 .page {
   height: 100%;
-  /*для прибития футера*/
 }
 
 .page-body {
   min-height: 100%;
-
-  /* display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start; */
-
   min-width: 1160px;
   margin: 0;
   padding: 0;
@@ -75,26 +62,16 @@
   line-height: 24px;
   color: var(--basic-dark);
   background-color: var(--basic-white);
-
-/*шапка занимает высоту по своему контенту, как и подвал,
- а контентная часть занимает всё возможное пространство.
- Так добиваемся того, чтобы подвал прилип к низу страницы.
-
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
-*/
 }
 
 .positioner {
   width: 1160px;
   margin: 0 auto;
   padding:0 20px;
-  /* outline: 1px solid cyan; */
+
   position: relative;
 }
-/*начало блока для управления слайдером*/
+
 .main-slider {
 
 
@@ -125,12 +102,10 @@
   height: 18px;
 
   position: relative;
-  /* margin: 0 auto; */
+
   margin-left: 5px;
   background-color: #ffffff;
   border-radius: 50%;
-  /*делаем прозрачную границу, потому, что у браузера
-  есть свои стили*/
   border:transparent;
   cursor: pointer;
   display: -webkit-box;
@@ -144,8 +119,6 @@
           justify-content: center;
 
 }
-/*если у контроллера слайдов есть этот класс,
-то она изменит свой фон, т.е. активный контроллер*/
 
 .slider-controls button.current:after {
   content: "";
@@ -158,25 +131,16 @@
   display: block;
 }
 
-
-/*конец блока для управления слайдером*/
-
-
-
-
 a {
   text-decoration: none;
 }
 
 img {
-  max-width: 100%;/*чтобы они не вылезали за пределы своих родительских элементов*/
-  height: auto;/*автоматическую высоту, чтобы изменение размеров было пропорциональным*/
-}
+  max-width: 100%;
+  height: auto;
 
 .main-header {
   background-color:var(--basic-light-grey);
-  /* outline: 3px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px; */
   padding-top: 51px;
   margin-bottom: -5px;
 }
@@ -185,16 +149,8 @@ img {
 .main-navigation {
 
   background-color: transparent;
-/*уберу гриды и попробую flex*/
-  /* display: grid;
-  grid-template-columns: 140px 1fr min-content;
-  justify-items: center;
-  align-items: center; */
-
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -202,12 +158,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* margin-bottom: 75px; */
-
-
-
-
-
 }
 
 .main-header-logo {
@@ -218,19 +168,15 @@ img {
 
 .site-navigation {
   list-style: none;
-  /* outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  /* justify-items: center;
-  justify-content: center;*/
+   flex-wrap: wrap;
   width: 800px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   padding-top: 14px;
@@ -245,28 +191,24 @@ img {
 }
 
 
-/* User navigation */
+
 .site-navigation-item {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
   color: var(--basic-black);
-  outline: none; /*убирает контур фокуса*/
-  text-decoration: none;/*убирает подчеркивание текста*/
+  outline: none;
+  text-decoration: none;
   text-transform: uppercase;
-
-
-
  }
 
 
-/*при фокусировка и наведении*/
 .site-navigation-item:focus,
 .site-navigation-item:hover {
   color: var(--light-red);
 }
-/*при нажатии*/
+
 .site-navigation-item:active {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -282,17 +224,12 @@ img {
 .basket-container {
   position: relative;
   justify-self: flex-end;
-  /* outline: 1px solid #ff0000; */
   padding-top: 15px;
 }
 
 
 .basket-link::before {
   content: "";
-  /*absolute нужет потому что content  - это строчный,
-  а строчному нельзя задать ширину и высоту, задали абсолют,
-  появились размеры
-  */
   position: absolute;
   width: 15px;
   height: 15px;
@@ -308,29 +245,11 @@ img {
   padding-left: 41px;
 }
 
-
-
-
-
-
-
-
 .content-uppercase, .basket-link, .services-list-title {
   text-transform: uppercase;
 }
 
-/*А еще некоторые реализуют так: */
-/*.site-navigation a:not([href]) {
-}
-Не универсальный способ, очевидно же, что это нужно
-делать через классы и js.
-И тут зануда скажет: "А если отключат js?"
-*/
 
-.index-page-container {
-  /* outline: 5px solid red;
-  outline-offset: -5px; */
-}
 .grey-background {
 background-color: var(--basic-light-grey);
 
@@ -344,7 +263,7 @@ background-color: var(--basic-light-grey);
   list-style: none;
   margin: 0;
   padding: 0;
-   position: relative; /*для кнопок слайдера */
+   position: relative;
    box-sizing: border-box;
 
 
@@ -355,15 +274,12 @@ background-color: var(--basic-light-grey);
   display: grid;
   -ms-grid-columns: 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px;
   grid-template-columns: repeat(12, 60px);
-  /* -ms-grid-rows: 431px;
-  grid-template-rows: 431px; */
   min-height: 431px;
   -webkit-column-gap: 40px;
      -moz-column-gap: 40px;
           column-gap: 40px;
   position: relative;
-  /* display: flex;
-  justify-content: space-between; */
+
 }
 
 .feature-item > *:nth-child(1) {
@@ -465,7 +381,6 @@ margin-top: 74px;
 margin-bottom: 28px;
 
 }
-/*временно прячем 2 блока слайдера*/
 .feature-item-hidden {
   display: none;
 }
@@ -479,20 +394,19 @@ margin-bottom: 28px;
   font-size: 16px;
   line-height: 18px;
   border-radius: 3px;
-  outline: none; /*убирает контур фокуса*/
-  text-decoration: none;/*убирает подчеркивание текста*/
+  outline: none;
+  text-decoration: none;
   background-color:  var(--light-red);
   color:  var(--basic-white);
   text-transform: uppercase;
   display: inline-block;
-
 }
-/*при фокусировка напр табами и наведении*/
+
 .button:focus,
 .button:hover {
   background-color: var(--red);
   }
-/*при нажатии*/
+
 .button:active {
   background-color: var(--dark-red);
   color: rgba(255, 255, 255, 0.3);
@@ -502,14 +416,11 @@ margin-bottom: 28px;
 
 .learn-more-button{
   padding: 18px 54px 15px 54px;
-  /* position: absolute; */
-  /* z-index: 21;
-  display: block; */
+
 }
 
-/*Sirvices*/
+
 .services{
-  /* outline: 5px solid rgba(255, 0, 0 , 0.3); */
   padding-top: 78px;
 
 }
@@ -528,10 +439,7 @@ margin-bottom: 28px;
 
 
 }
-.services-list-item {
-  /* outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px; */
-}
+
 .services-list-title {
   font-weight: bold;
   font-size: 24px;
@@ -556,12 +464,12 @@ margin-bottom: 28px;
 
 }
 
-/*при фокусировка напр табами и наведении*/
+
 .button-red:focus,
 .button-red:hover {
   background-color: var(--red);
  }
-/*при нажатии*/
+
 .button-red:active {
   background-color: var(--dark-red);
   color: rgba(255, 255, 255, 0.6);
@@ -574,12 +482,12 @@ margin-bottom: 28px;
   background-color: var(--light-green);
   color:var(--basic-white);
 }
-/*при фокусировка напр табами и наведении*/
+
 .button-green:focus,
 .button-green:hover {
   background-color: var(--green);
  }
-/*при нажатии*/
+
 a.button-green:active {
   background-color: var(--dark-green);
   color: rgba(255, 255, 255, 0.6);
@@ -591,12 +499,12 @@ a.button-green:active {
   background-color: var(--light-yellow);
   color:var(--basic-white);
 }
-/*при фокусировка напр табами и наведении*/
+
 .button-yellow:focus,
 .button-yellow:hover {
   background-color: var(--yellow);
  }
-/*при нажатии*/
+
 .button-yellow:active {
   background-color: var(--dark-yellow);
   color: rgba(255, 255, 255, 0.6);
@@ -605,15 +513,13 @@ a.button-green:active {
 
 }
 
-/*About*/
+
 .about {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px;
   grid-template-columns: repeat(12, 60px);
   grid-gap: 40px;
-  /* outline: 5px solid rgba(180, 32, 131, 0.3);
-  outline-offset: -5px; */
   border-top: 2px solid var(--basic-light-grey);
 
 }
@@ -691,8 +597,6 @@ a.button-green:active {
   list-style: none;
   margin: 0;
   padding: 0;
-
-
 }
 /*стилизованные булиты в виде красной полосочки*/
 .about-list-item::before {
@@ -702,8 +606,6 @@ a.button-green:active {
   background-color: var(--light-red);
   display: inline-block;
   margin-right: 11px;
-
-
 }
 
 
@@ -720,8 +622,6 @@ a.button-green:active {
 }
 .percent-list {
   list-style: none;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -729,14 +629,12 @@ a.button-green:active {
       flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  /* margin-top: -45px; */
-  margin-bottom: 75px;
+   margin-bottom: 75px;
 
 
 }
 .percent-list-item {
-  /* width: 100px; */
-  -ms-flex-item-align: top;
+    -ms-flex-item-align: top;
       -ms-grid-row-align: top;
       align-self: top;
   margin-right: 20px;
@@ -766,38 +664,14 @@ a.button-green:active {
   font-size: 26px;
   line-height: 40px;
   top: -0.5em;
-  /* position: absolute; */
-  /* vertical-align: baseline; */
-  /* font-size: 26px;
-  line-height: 0;
-  position: absolute;
-  vertical-align: baseline;
-  margin-top: 44px; */
 }
 
 .percent-sup {
   font-size: 26px;
   line-height: 40px;
   top: -0.5em;
-  /* position: absolute; */
-  /* vertical-align: baseline; */
-  /* font-size: 26px;
-  line-height: 0;
-  position: absolute;
-  vertical-align: baseline;
-  margin-top: 44px; */
 }
 
-
-/* .percent-list-level span{
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 40px;
-  color: var(--basic-black);
-  position: absolute;
-   right: 25px;
-
-} */
 
 .level-desc {
   font-weight: normal;
@@ -805,17 +679,13 @@ a.button-green:active {
   line-height: 18px;
   padding: 0;
   margin: 0;
-  /* margin-bottom: 30px; */
+
   margin-right: 10px;
 
 }
 .level-desc:last-child{
   margin-right: 0px;
 }
-
-
-
-
 
 /*Partners*/
 .partners-list {
@@ -840,20 +710,12 @@ a.button-green:active {
 }
 
 .partners-list-item {
-  /* align-self: center;
-  justify-self: center;
-  padding-top: 46px;
-  padding-bottom: 44px;
-  position: relative;
-  padding-right: 48px; */
   -ms-flex-item-align: center;
       align-self: center;
   justify-self: center;
   padding-top: 47px;
   padding-bottom: 35px;
   position: relative;
-  /* display: flex; */
-  /* padding-right: 48px; */
 
 }
 
@@ -865,9 +727,9 @@ a.button-green:active {
    opacity: 1;
   position: absolute;
   right: -52px;
-  top: 0;/*это значение выравнивает по вертикали по центру*/
-  bottom: 0;/*это значение выравнивает по вертикали по центру*/
-  margin: auto 0;/*это значение выравнивает по вертикали по центру*/
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 
 }
 
@@ -887,42 +749,7 @@ a.button-green:active {
   opacity: 0.1;
 }
 
-/* .ya {
-  display: flex;
-}
-
-.ya::after{
-height: 52px;
-width: 2px;
-content: "";
-background-color: var(--basic-light-grey);
-display: inline-block;
-margin-left: 48px;
-opacity: 1;
-align-self: center;
-}
-
-.ya:last-child::after{
-  display: none;
-  margin: 0;
-  padding: 0;
-
-} */
-
-
-
-
-
-
-
-
-
-
 /*footer*/
-
-.main-footer {
-  /* outline: 5px solid rgba(255, 0, 0, 0.7); */
-}
 
 
 .main-footer-address {
@@ -935,8 +762,6 @@ align-self: center;
 
   margin: 0;
   margin-left: 22px;
-  /* transform: translate(0, 376px); */
-  /* не вкатывает ((( */
   padding-top: 5px;
   text-align: center;
   background-color: var(--basic-white);
@@ -947,8 +772,7 @@ align-self: center;
   font-size: 18px;
   line-height: 30px;
   color: var(--basic-black);
-  /*нужен ли этот отступ поглядим попозже*/
-  margin-top: 0;
+   margin-top: 0;
   padding-top: 47px;
   margin-right: 39px;
   margin-right: 22px;
@@ -982,21 +806,17 @@ align-self: center;
 }
 
 
-
-/*при фокусировка напр табами и наведении*/
 .main-footer-button:focus,
 .main-footer-button:hover {
   background-color: var(--red);
  }
-/*при нажатии*/
+
 .main-footer-button:active {
   background-color: var(--dark-red);
 }
 
 .footer-map-container {
   height: 416px;
-  /* box-sizing: border-box; */
-  /* position: relative; */
 }
 
 .footer-map-container iframe {
@@ -1020,10 +840,6 @@ align-self: center;
 
 /*Social*/
 .main-footer-social {
-
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px 40px 60px;
@@ -1032,8 +848,6 @@ align-self: center;
      -moz-column-gap: 40px;
           column-gap: 40px;
   justify-items: start;
-  /* align-items: center; */
-  /* padding-top: 68px; */
   padding-top: 0px;
 
 }
@@ -1048,7 +862,6 @@ align-self: center;
 }
 .footer-right{
   grid-column: 5/-1;
-  /* justify-self: start; */
   padding: 0;
   margin: 0;
   margin-top: 75px;
@@ -1071,11 +884,6 @@ align-self: center;
   line-height: 22px;
   color: var(--dark-grey);
 }
-
-
-
-
-
 
 .social-list {
   list-style: none;
@@ -1114,7 +922,7 @@ align-self: center;
   background-image:none;
   background-color: var(--red);
  }
-/*при нажатии*/
+
 .social-button:active {
   background-image:none;
   background-color: var(--dark-red);
@@ -1125,14 +933,6 @@ align-self: center;
   fill:rgba(255, 255, 255, 0.3);
 }
 
-
-
-/*-------------------------------------------------------*/
-/*-------------------------------------------------------*/
-/*-------------------------------------------------------*/
-/*-------------------------------------------------------*/
-
-
 /*Начало страницы catalog.html*/
 .container {
   display: -ms-grid;
@@ -1142,23 +942,18 @@ align-self: center;
   -webkit-column-gap: 40px;
      -moz-column-gap: 40px;
           column-gap: 40px;
-  /* outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px; */
+
 }
 .filters{
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
-  /* outline: 5px solid rgba(0, 0, 255, 0.7);
-  outline-offset: -5px; */
 }
 
 .results-column {
   grid-column: 5/-1;
   -ms-flex-line-pack: start;
       align-content: start;
-  /* outline: 5px solid rgba(0, 0, 255, 0.7);
-  outline-offset: -5px; */
 }
 
 
@@ -1183,17 +978,10 @@ align-self: center;
   line-height: 19px;
   color: var(--basic-dark);
 }
-
 /* Блок с ползунком */
-/* ------------------------------------------ */
 
 legend {
-  /* box-sizing: border-box; */
-  /* color: inherit; */
   display: block;
-  /* max-width: 100%; */
-  /* padding: 0; */
-  /* white-space: normal; */
 }
 
 .legend-title {
@@ -1212,24 +1000,15 @@ legend {
   width: 260px;
 }
 
-/* Теперь выровняем шкалу по центру нашего элемента.
-Для этого зададим верхний внутренний отступ,
-равный общей высоте блока,
- минус высота шкалы и всё это делённое на 2: ( (80px — 2px) / 2 = 39px ). */
-
 .range-controls {
   height: 80px;
   background: var(--basic-light-grey);
   border-radius: 3px;
   margin-bottom: 14px;
   padding-top: 39px;
-  /* Так как внутренние отступы учитываются в размер объекта,
-  уменьшим высоту объекта на размер верхнего
-  внутреннего отступа. */
   height: 41px;
   padding-right: 20px;
   padding-left: 20px;
-  /* для кружков делаем relative */
   position:relative;
 }
 
@@ -1238,7 +1017,7 @@ legend {
   background: #d7dcde;
 
 }
-/* зеленая полосочка */
+
 .range-controls .bar {
   width: 70%;
   height: 2px;
@@ -1259,13 +1038,12 @@ legend {
   border-radius: 50%;
   -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
           box-shadow: 0 2px 1px 0 #cfcfcf;
-  /* box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15); */
+
   cursor: pointer;
 
 }
 
-/* А теперь через уникальные классы добавим позицию слева,
-для каждого элемента. */
+
 .range-controls .toggle-min {
   left: 18px;
 }
@@ -1305,14 +1083,6 @@ legend {
   background-color: var(--basic-light-grey);
 
 }
-
-
-
-
-
-
-
-
 
 
 .filters-form ul {
@@ -1370,9 +1140,6 @@ legend {
   background-color: transparent;
   margin-left: -40px;
 }
-.grid-view-label {
-  /* padding-left: 20px; */
-}
 
 .grid-view-radio:checked + .radio-box {
   background-image: url(../img/input/radio-on.svg);
@@ -1381,7 +1148,6 @@ legend {
 .grid-view-radio:focus + .radio-box,
 .grid-view-radio:hover + .radio-box {
   background-image: url(../img/input/radio-off.svg);
-  /* background-image: url(../img/input/radio-on.svg); */
   opacity: 1;
 }
 .grid-view-radio:checked:focus + .radio-box,
@@ -1399,39 +1165,20 @@ legend {
   opacity: 0.1;
 }
 
-
-
-
-/*Здесь нужно подкрутить*/
-
-.feature-list {
-  /* margin: 0; */
-  /* padding: 0; */
-}
-
 .feature-list-item {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
 }
 
-
-
 /*Чекбоксы*/
 .check-input {
-  /* первый способ */
-  /* position: absolute;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none; */
-  /* второй способ */
+
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-
-
 }
 .check-input:checked + .check-box {
 
@@ -1463,13 +1210,10 @@ legend {
   background-image: url(../img/input/checkbox-on.svg);
   opacity: 0.1;
 }
-/*много селекторов, но не знаю как по-другому подобраться*/
+
   .check-input:disabled + .check-box + .feature-list-disabled{
   color: rgba(0, 0, 0, 0.3);
 }
-
-
-
 
 .check {
   padding-left: 0px;
@@ -1492,7 +1236,6 @@ border-radius: 3px;
 text-transform: uppercase;
 background-color: var(--basic-light-grey);
 padding: 17px 89px 15px 88px;
-/*попробовал сделать отступы у этой кнопки*/
 border: none;
 
 }
@@ -1511,8 +1254,6 @@ border: none;
 
 
 .filters-form fieldset {
-
-  /* margin-bottom: 56px; */
   border: none;
 }
 .fieldset-cost {
@@ -1522,11 +1263,6 @@ border: none;
   margin-bottom: 57px;
   border: none;
 }
-
-
-
-
-
 
 .fieldset-grid {
   padding: 0;
@@ -1677,8 +1413,6 @@ border: none;
   opacity: 1;
 }
 
-
-
 /*Карточки*/
 
 .results-list {
@@ -1693,8 +1427,6 @@ border: none;
      -moz-column-gap: 40px;
           column-gap: 40px;
   row-gap: 30px;
-  /* outline: 5px solid rgba(255, 0, 221, 0.7);
-  outline-offset: -5px; */
   margin-bottom: 60px;
 
 }
@@ -1714,10 +1446,6 @@ border: none;
 .card-container:hover .results-hover{
   display: block;
 }
-
-
-
-
 
 .results-hover h3 {
   margin: 0;
@@ -1810,22 +1538,14 @@ border: none;
 }
 
 .card-container img {
-  /* position: relative;
-  z-index: 1; */
+
   width: 358px;
   height: 578px;
   margin: 0;
 
 }
 .card-container:hover .results-hover{
-  /*
-  display:block;
-  position: relative;
-  z-index: 5;
-  top: -300px;
-  */
   background: var(--basic-light-grey);
-  /* outline: 1px solid  green; */
 }
 
 .pagination-list {
@@ -1860,7 +1580,6 @@ color: var(--basic-black);
 background-color: var(--basic-light-grey);
 margin-bottom: 10px;
 display:inline-block;
-/* box-sizing: border-box; */
 border: none;
 }
 
@@ -1895,22 +1614,13 @@ border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  /*
-  margin-bottom: 10px;
-  display:inline-block;
-  box-sizing: border-box;
-  */
+
 }
-
-
-
-
 
 .pagination-item-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  /* padding: 14px 17px 12px 17px; */
   text-transform: uppercase;
   color: var(--basic-black);
 
@@ -1920,7 +1630,6 @@ border: none;
   background-color: var(--basic-light-grey);
   margin-bottom: 10px;
   display:inline-block;
-  /* box-sizing: border-box; */
   border: none;
 }
 .pagination-item-button:focus,
@@ -1957,24 +1666,17 @@ border: none;
           box-sizing: border-box;
   /* position: absolute; */
   position: fixed;
-  /* top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0; */
   margin: 0 auto;
   overflow: auto;
   z-index: 200;
-  /* отключает всплывашку */
   display: none;
   padding: 0;
-
-  /* этим центруем всплывашку */
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-/*------------------------ */
+
 }
 .modal-show {
   display: block;
@@ -1985,8 +1687,6 @@ border: none;
 .modal-error {
   animation: shake 0.6s;
 }
-
-
 /* Animations */
 
 @keyframes bounce {
@@ -2004,8 +1704,6 @@ border: none;
   }
 
 }
-
-
 
 /* Добавим анимацию для тряски формы в случае ошибки. */
 @keyframes shake {
@@ -2116,8 +1814,7 @@ border: none;
   padding: 16px 14px 16px 16px;
   margin: 0;
   margin-bottom: 48px;
-  /* отключаем возможность растягивать окно ввода */
-  resize: none;
+   resize: none;
 }
 
 
@@ -2171,8 +1868,6 @@ input.form-input:invalid  {
   padding: 17px 83px 15px 83px;
   outline: none;
   display: block;
-  /* отключаем браузерный стиль */
+
   border: none;
 }
-
-

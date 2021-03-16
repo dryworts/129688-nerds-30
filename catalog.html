@@ -8,34 +8,11 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
-</head>
+  </head>
 
 <body class="page-body">
-
-  <!-- <header class="main-header">
-      <div class="positioner">
-      <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
-            <img src="img/nerds-logo.svg" height="49" width="140" alt="Перейти на главную страницу сайта Нёрдс">
-        </a>
-         <ul class="site-navigation">
-             <li><a class="site-navigation-item" href="#">Студия</a></li>
-             <li><a class="site-navigation-item" href="#">Клиенты</a></li>
-             <li><a class="site-navigation-item site-navigation-active"site-navigation>Магазин</a></li>
-             <li><a class="site-navigation-item" href="#">Контакты</a></li>
-        </ul>
-        <div class="basket-container">
-          <a class="site-navigation-item basket-link" href="#">Корзина</a>
-        </div>
-      </nav>
-      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
-      </div>
-    </header> -->
-
   <header class="main-header">
     <nav class="main-navigation positioner">
       <a class="main-header-logo" href="index.html">
@@ -57,30 +34,20 @@
   <div class="positioner">
     <main class="container">
       <section class="filters">
-        <!-- фильтры -->
         <h2 class="visually-hidden">фильтр шаблонов</h2>
         <form class="filters-form" method="get" action="https://echo.htmlacademy.ru/">
           <fieldset class="fieldset-cost">
             <legend class="legend-title">Стоимость:</legend>
             <div class="range-filter">
               <div class="range-controls">
-                <!--элемент с ползулнками-->
-                <!-- Первый блок указывает полную ширину прогресс-бара.
-                        Второй, вложенный в него, указывает выбранный диапазон. -->
                 <div class="scale">
                   <div class="bar" style="width: 30%; margin-left: 20%">
                   </div>
                 </div>
                 <div class="toggle toggle-min" tabindex="0" style="left: 20%" aria-label="Установить минимальное значение стоимости"></div>
                 <div class="toggle toggle-max" tabindex="0" style="left: 50%" aria-label="Установить максимальное значение стоимости"></div>
-                <!-- <input class="range" type="range" min="0" max="15000" step="10"><br> -->
               </div>
               <div class="price-controls">
-                <!--поля для ввода цены-->
-                <!-- <label class="range-label" for="from">От</label>
-                        <input class="range-input" type="number" name="start-cost" min="1" max="15000" id="from">
-                        <label class="range-label" for="to">До</label>
-                        <input class="range-input" type="number" name="end-cost" min="1" max="15000" id="to"> -->
                 <label class="min-price">
                   от
                   <input type="number" name="min-price" value="0">
@@ -91,10 +58,7 @@
                 </label>
 
               </div>
-              <!--price-controls-->
-              <!-- <div>range-controls -->
             </div>
-            <!--range-filter-->
           </fieldset>
           <fieldset class="fieldset-grid">
             <legend class="grid-view">Сетка:</legend>
@@ -168,10 +132,8 @@
         </form>
       </section>
       <div class="results-column">
-        <!---результаты фильтров-->
         <section class="sort-section">
           <h2 class="visually-hidden">Сортировка</h2>
-          <!-- <fieldset> -->
           <div class="sort-section-title">
             <div class="legend-title">Сортировать:</div>
             <ul class="sort-section-list">
@@ -181,14 +143,11 @@
               <li>
                 <a class="descending descending-active-item" href="" aria-label="Отсортировать по убыванию"></a>
               </li>
-              <!-- по-убыванию -->
               <li>
                 <a class="ascending" href="" aria-label="Отсортировать по возрастанию"></a>
               </li>
-              <!--можно добавить класс .ascending-active-item-->
             </ul>
           </div>
-          <!-- </fieldset> -->
         </section>
 
         <section class="results">
@@ -199,7 +158,6 @@
               <img src="img/img-sedona.jpg" width="358" height="578" alt="Миниатюра сайта SEDONA">
 
               <div class="results-hover">
-                <!-- контейнер для hover -->
                 <h3><a href="#" class="results-link-title">SEDONA</a></h3>
                 <p class="results-hover-content">Информационный сайт
                   <br>для туристов</p>
@@ -213,7 +171,6 @@
               <img src="img/img-pink.jpg" width="358" height="578" alt="Миниатюра сайта Pink">
 
               <div class="results-hover">
-                <!-- контейнер для hover -->
                 <h3><a href="#" class="results-link-title">Pink App</a></h3>
                 <p class="results-hover-content">Продвинутый лендинг
                   <br>приложения для iOS и Android</p>
@@ -224,7 +181,6 @@
 
               <img src="img/img-barbershop.jpg" width="358" height="578" alt="Миниатюра сайта Барбершоп">
               <div class="results-hover">
-                <!-- контейнер для hover -->
                 <h3><a href="#" class="results-link-title">Barbershop</a></h3>
                 <p class="results-hover-content">Сайт салона красоты.
                   <br>Для мужчин, да.</p>
@@ -235,7 +191,6 @@
 
               <img src="img/img-mishka.jpg" width="358" height="578" alt="Миниатюра сайта Mishka">
               <div class="results-hover">
-                <!-- контейнер для hover -->
                 <h3><a href="#" class="results-link-title">Mishka</a></h3>
                 <p class="results-hover-content">Интернет магазин
                   <br>вязаных игрушек</p>
@@ -246,7 +201,6 @@
 
               <img src="img/img-aplus.jpg" width="358" height="578" alt="Миниатюра сайта A-plus">
               <div class="results-hover">
-                <!-- контейнер для hover -->
                 <h3><a href="#" class="results-link-title">A Plus</a></h3>
                 <p class="results-hover-content">Лендинг курсов повышения
                   <br>квалификации</p>
@@ -257,7 +211,6 @@
 
               <img src="img/img-kvast.jpg" width="358" height="578" alt="Миниатюра сайта Кваст">
               <div class="results-hover">
-                <!-- контейнер для hover -->
                 <h3><a href="#" class="results-link-title">Кваст</a></h3>
                 <p class="results-hover-content">Промо-сайт производителя
                   <br>крафтового кваса</p>
@@ -273,10 +226,8 @@
           </ul>
         </section>
       </div>
-      <!--конец блока результаты фильтров-->
     </main>
   </div>
-  <!--конец блока positioner-->
 
   <footer class="main-footer">
     <div class="positioner">
@@ -292,10 +243,8 @@
 
       </section>
     </div>
-    <!--конец центровщика-->
 
     <div class="footer-map-container">
-      <!-- <img class="imgStretch" src="img/map2.png" width="1440" height="416" alt="расположение студии Нердс на карте. Адрес: Санкт-Петербург, ул. Б. Конюшенная, дом 19/8"> -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1615224923348!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" title="расположение студии Нердс на карте. Адрес: Санкт-Петербург, ул. Б. Конюшенная, дом 19/8">
       </iframe>
     </div>
@@ -334,7 +283,6 @@
 
       </section>
     </div>
-    <!--конец центровщика-->
   </footer>
   <section class="modal-letter">
     <div class="modal-wrapper">
