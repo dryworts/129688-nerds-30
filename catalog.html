@@ -9,10 +9,11 @@
   <link rel="apple-touch-icon" href="apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
-  <header class="main-header">
+  <header class="main-header main-header-catalog">
     <nav class="main-navigation positioner">
       <a class="main-header-logo" href="index.html">
         <img src="img/nerds-logo.svg" height="65" width="160" alt="Логотип Нёрдс">
@@ -40,21 +41,27 @@
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
-                  <div class="bar" style="width: 30%; margin-left: 20%">
+                  <div class="bar">
                   </div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="left: 20%" aria-label="Установить минимальное значение стоимости"></div>
-                <div class="toggle toggle-max" tabindex="0" style="left: 50%" aria-label="Установить максимальное значение стоимости"></div>
+                <div aria-label="Установить минимальное значение стоимости" class="toggle toggle-min" tabindex="0"></div>
+                <div aria-label="Установить максимальное значение стоимости" class="toggle toggle-max" tabindex="0"></div>
               </div>
+
+
               <div class="price-controls">
+                <div class="price-controls-left">
                 <label class="min-price">
-                  от
-                  <input type="number" name="min-price" value="0">
+                  <span class="from">от</span>
+                  <input class="min-price-from" type="number" name="min-price" value="0">
                 </label>
+              </div>
+              <div class="price-controls-right">
                 <label class="max-price">
-                  до
-                  <input type="number" name="max-price" value="15000">
+                  <span class="to">до</span>
+                  <input class="min-price-to" type="number" name="max-price" value="15000">
                 </label>
+              </div>
 
               </div>
             </div>
@@ -237,7 +244,7 @@
       </section>
     </div>
     <div class="footer-map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1615224923348!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" title="расположение студии Нердс на карте. Адрес: Санкт-Петербург, ул. Б. Конюшенная, дом 19/8">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1615224923348!5m2!1sru!2sru" allowfullscreen="" loading="lazy" title="расположение студии Нердс на карте. Адрес: Санкт-Петербург, ул. Б. Конюшенная, дом 19/8">
       </iframe>
     </div>
     <div class="positioner">
